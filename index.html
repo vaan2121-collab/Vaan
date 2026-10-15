@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2a1d13">
+  <title>Шашкрафт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="logo">ШАШКРАФТ</h1>
+
+    <div class="diff" role="group" aria-label="Сложность">
+      <button class="mc-btn diff-btn" data-level="easy">Лёгкий</button>
+      <button class="mc-btn diff-btn" data-level="medium">Средний</button>
+      <button class="mc-btn diff-btn" data-level="hard">Сложный</button>
+    </div>
+
+    <div class="hud">
+      <div class="hud-side"><span class="mini you"></span><span id="count-you">12</span></div>
+      <p id="status" class="status">Твой ход</p>
+      <div class="hud-side"><span id="count-cpu">12</span><span class="mini cpu"></span></div>
+    </div>
+
+    <div class="board-frame">
+      <div id="board" class="board"></div>
+    </div>
+
+    <div class="bottom">
+      <button id="new-game" class="mc-btn">Новая игра</button>
+      <button id="music-btn" class="mc-btn">Музыка: Вкл</button>
+      <button id="sfx-btn" class="mc-btn">Звуки: Вкл</button>
+    </div>
+
+    <p class="score">Победы: <b id="wins">0</b> &nbsp; Поражения: <b id="losses">0</b></p>
+  </main>
+
+  <div id="start" class="overlay start">
+    <div class="panel">
+      <h1 class="logo big">ШАШКРАФТ</h1>
+      <div class="splash">Теперь с алмазами!</div>
+      <p class="label">Сложность</p>
+      <div class="diff col">
+        <button class="mc-btn diff-btn" data-level="easy">Лёгкий</button>
+        <button class="mc-btn diff-btn" data-level="medium">Средний</button>
+        <button class="mc-btn diff-btn" data-level="hard">Сложный</button>
+      </div>
+      <button id="play" class="mc-btn play">Играть</button>
+      <p class="hint">Русские шашки: бить обязательно, простые бьют и назад, дамка ходит на любое число клеток.</p>
+    </div>
+  </div>
+
+  <div id="end" class="overlay end" hidden>
+    <div class="panel">
+      <h2 id="end-title">Победа!</h2>
+      <p id="end-text" class="end-text"></p>
+      <button id="again" class="mc-btn">Играть снова</button>
+      <button id="look" class="mc-btn">Посмотреть доску</button>
+    </div>
+  </div>
+
+  <script src="music.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
